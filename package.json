@@ -15,5 +15,7 @@
     "start": "npx live-server --open=demo",
     "postversion": "git push --follow-tags"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
