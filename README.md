@@ -14,10 +14,10 @@ A Vanilla Web Component to ressurect our dearly beloved and sorely missed `<marq
 ## Installation
 
 ```sh
-npm i @vanillawc/wc-markdown
+npm i @vanillawc/wc-marquee
 ```
 
-The package can be found in `node_modules/@vanillawc/wc-markdown`.
+The package can be found in `node_modules/@vanillawc/wc-maquee`.
 
 -----
 
@@ -28,7 +28,7 @@ The package can be found in `node_modules/@vanillawc/wc-markdown`.
 ```html
 <wc-marquee>
 This text will marquee across the screen
-</wc-markdown>
+</wc-marquee>
 ```
 
 ### Enable party mode
@@ -36,7 +36,7 @@ This text will marquee across the screen
 ```html
 <wc-marquee party>
 This will demonstrate the resplendent joy of HTML in its prime
-</wc-markdown>
+</wc-marquee>
 ```
 
 ### Styling
@@ -46,5 +46,5 @@ Stying can be done using standard css attributes.
 ```html
 <wc-marquee style="font-family: sans-serif;">
 This will demonstrate the resplendent joy of HTML in its prime
-</wc-markdown>
+</wc-marquee>
 ```
