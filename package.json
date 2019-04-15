@@ -1,6 +1,6 @@
 {
   "name": "@vanillawc/wc-marquee",
-  "version": "1.0.0-rc0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
   "description": "A vanilla web component marquee banner with party mode",
