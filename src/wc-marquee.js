@@ -15,10 +15,6 @@ template.innerHTML = `
   animation: marquee 15s linear infinite;
 }
 
-.marquee span:hover {
-  animation-play-state: paused
-}
-
 @keyframes marquee {
   0% {
     transform: translate(0, 0);
@@ -28,7 +24,7 @@ template.innerHTML = `
   }
 }
 </style>
-<p class="marquee"><span>Windows 8 and ...</span></p>
+<p class="marquee"><span><slot></slot></span></p>
 `;
 
 export class WCMarquee extends HTMLElement {
@@ -37,18 +33,55 @@ export class WCMarquee extends HTMLElement {
     super();
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(document.importNode(template.content, true));
-    this.shadowRoot.querySelector('span').innerHTML = this.innerHTML;
   };
 
   static get observedAttributes() {
-    return [];
+    return ['font', 'party'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    this[name] = newValue;
+    switch(name) {
+      case 'font':
+        this.font = newValue;
+        break;
+      case 'party':
+        this.party = this.hasAttribute('party');
+    }
   }
 
-  async connectedCallback() {}
+  async connectedCallback() {
+    this.font = this.hasAttribute('font') ? this.getAttribute('font') : 'Comic Sans MS';
+    this.party = this.hasAttribute('party');
+  }
+
+  get font() { return this.getAttribute('font'); }
+  set font(value) {
+    const root = this.shadowRoot.querySelector('.marquee');
+    if (value) {
+      root.style.fontFamily = value;
+    } else {
+      this.removeAttribute('font');
+    }
+  }
+
+  get party() { return this.getAttribute('party'); }
+  set party(value) {
+    const element = this.shadowRoot.querySelector('.marquee');
+    if (value) {
+      this.partifier = setInterval(function() {
+          let r = Math.floor(Math.random() * 255);
+          let g = Math.floor(Math.random() * 255);
+          let b = Math.floor(Math.random() * 255);
+          element.style.color = `rgb(${r}, ${g}, ${b})`;
+      }, 400);
+      return;
+    }
+    
+    if (this.partifier) {
+      clearInterval(this.partifier);
+      this.removeAttribute('party');
+    }
+  }
 
 }
 
