@@ -2,7 +2,6 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
 .marquee {
-  width: 450px;
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
@@ -24,7 +23,7 @@ template.innerHTML = `
   }
 }
 </style>
-<p class="marquee"><span><slot></slot></span></p>
+<p class="marquee" style="width: inherit;"><span><slot></slot></span></p>
 `;
 
 export class WCMarquee extends HTMLElement {
@@ -33,6 +32,10 @@ export class WCMarquee extends HTMLElement {
     super();
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(document.importNode(template.content, true));
+
+    // set default width
+    this.style.width = (this.style.width) ?  this.style.width : '100%';
+
   };
 
   static get observedAttributes() {
