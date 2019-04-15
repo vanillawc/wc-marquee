@@ -35,36 +35,22 @@ export class WCMarquee extends HTMLElement {
 
     // set default width
     this.style.width = (this.style.width) ?  this.style.width : '100%';
-
+    this.style.fontFamily = (this.style.fontFamily) ? this.style.fontFamily : 'Comic Sans MS';
   };
 
   static get observedAttributes() {
-    return ['font', 'party'];
+    return ['party'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
     switch(name) {
-      case 'font':
-        this.font = newValue;
-        break;
       case 'party':
         this.party = this.hasAttribute('party');
     }
   }
 
   async connectedCallback() {
-    this.font = this.hasAttribute('font') ? this.getAttribute('font') : 'Comic Sans MS';
     this.party = this.hasAttribute('party');
-  }
-
-  get font() { return this.getAttribute('font'); }
-  set font(value) {
-    const root = this.shadowRoot.querySelector('.marquee');
-    if (value) {
-      root.style.fontFamily = value;
-    } else {
-      this.removeAttribute('font');
-    }
   }
 
   get party() { return this.getAttribute('party'); }
