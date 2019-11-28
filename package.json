@@ -15,6 +15,7 @@
   "scripts": {
     "start": "npx live-server --open=demo",
     "lint": "semistandard",
+    "preversion": "npm run lint",
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {
