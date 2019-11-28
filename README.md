@@ -31,6 +31,8 @@ This text will marquee across the screen
 </wc-marquee>
 ```
 
+***Demo: [WC-Marquee - Demo][]***
+
 ### Enable party mode
 
 ```html
@@ -38,6 +40,8 @@ This text will marquee across the screen
 This will demonstrate the resplendent joy of HTML in its prime
 </wc-marquee>
 ```
+
+***Demo: [WC-Marquee - 'party'][]***
 
 ### Styling
 
@@ -47,4 +51,7 @@ Stying can be done using standard css attributes.
 <wc-marquee style="font-family: sans-serif;">
 This will demonstrate the resplendent joy of HTML in its prime
 </wc-marquee>
+
 ```
+[WC-Marquee - Demo]: https://vanillawc.github.io/wc-marquee/demo/basic-usage.html
+[WC-Marquee - 'party']: https://vanillawc.github.io/wc-marquee/demo/pary-attribute.html
