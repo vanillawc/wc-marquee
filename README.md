@@ -53,7 +53,7 @@ Stying can be done using standard css attributes.
 <wc-marquee style="font-family: sans-serif;">
 This will demonstrate the resplendent joy of HTML in its prime
 </wc-marquee>
-
 ```
+
 [WC-Marquee - Demo]: https://vanillawc.github.io/wc-marquee/demo/basic-usage.html
 [WC-Marquee - 'party']: https://vanillawc.github.io/wc-marquee/demo/party-attribute.html
