@@ -1,9 +1,11 @@
 <h1>WC-Marquee</h1>
 
+[![GitHub release](https://img.shields.io/github/v/release/vanillawc/wc-marquee.svg)](https://github.com/vanillawc/wc-marquee/releases)
 [![npm](https://badgen.net/npm/v/@vanillawc/wc-marquee)](https://www.npmjs.com/package/@vanillawc/wc-marquee)
 [![downloads](https://badgen.net/npm/dt/@vanillawc/wc-marquee)](https://www.npmjs.com/package/@vanillawc/wc-marquee)
 [![Known Vulnerabilities](https://snyk.io/test/npm/@vanillawc/wc-marquee/badge.svg)](https://snyk.io/test/npm/@vanillawc/wc-marquee)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillawc/wc-marquee/master/LICENSE)
+[![Actions Status](https://github.com/vanillawc/wc-marquee/workflows/Release/badge.svg)](https://github.com/vanillawc/wc-marquee/actions)
 
 A Vanilla Web Component to ressurect our dearly beloved and sorely missed `<marquee>` element
 
