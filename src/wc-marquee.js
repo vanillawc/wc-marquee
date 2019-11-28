@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -27,51 +28,49 @@ template.innerHTML = `
 `;
 
 export class WCMarquee extends HTMLElement {
-
-  constructor() {
+  constructor () {
     super();
-    this.attachShadow({mode: 'open'});
+    this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(document.importNode(template.content, true));
+  }
 
-    // set default width
-    this.style.width = (this.style.width) ?  this.style.width : '100%';
-    this.style.fontFamily = (this.style.fontFamily) ? this.style.fontFamily : 'Comic Sans MS';
-  };
-
-  static get observedAttributes() {
+  static get observedAttributes () {
     return ['party'];
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    switch(name) {
+  attributeChangedCallback (name, oldValue, newValue) {
+    switch (name) {
       case 'party':
         this.party = this.hasAttribute('party');
     }
   }
 
-  async connectedCallback() {
+  async connectedCallback () {
+    // set default width
+    this.style.width = (this.style.width) ? this.style.width : '100%';
+    this.style.fontFamily = (this.style.fontFamily) ? this.style.fontFamily : 'Comic Sans MS';
+
     this.party = this.hasAttribute('party');
   }
 
-  get party() { return this.getAttribute('party'); }
-  set party(value) {
+  get party () { return this.getAttribute('party'); }
+  set party (value) {
     const element = this.shadowRoot.querySelector('.marquee');
     if (value) {
-      this.partifier = setInterval(function() {
-          let r = Math.floor(Math.random() * 255);
-          let g = Math.floor(Math.random() * 255);
-          let b = Math.floor(Math.random() * 255);
-          element.style.color = `rgb(${r}, ${g}, ${b})`;
+      this.partifier = setInterval(function () {
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        element.style.color = `rgb(${r}, ${g}, ${b})`;
       }, 400);
       return;
     }
-    
+
     if (this.partifier) {
       clearInterval(this.partifier);
       this.removeAttribute('party');
     }
   }
-
 }
 
 customElements.define('wc-marquee', WCMarquee);

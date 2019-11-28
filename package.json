@@ -14,6 +14,10 @@
   "main": "src/wc-marquee.js",
   "scripts": {
     "start": "npx live-server --open=demo",
+    "lint": "semistandard",
     "postversion": "git push --follow-tags"
+  },
+  "devDependencies": {
+    "semistandard": "^14.2.0"
   }
 }
