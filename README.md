@@ -56,4 +56,4 @@ This will demonstrate the resplendent joy of HTML in its prime
 
 ```
 [WC-Marquee - Demo]: https://vanillawc.github.io/wc-marquee/demo/basic-usage.html
-[WC-Marquee - 'party']: https://vanillawc.github.io/wc-marquee/demo/pary-attribute.html
+[WC-Marquee - 'party']: https://vanillawc.github.io/wc-marquee/demo/party-attribute.html
