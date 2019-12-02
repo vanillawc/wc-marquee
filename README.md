@@ -1,5 +1,3 @@
-<h1>WC-Marquee</h1>
-
 [![GitHub release](https://img.shields.io/github/v/release/vanillawc/wc-marquee.svg)](https://github.com/vanillawc/wc-marquee/releases)
 [![npm](https://badgen.net/npm/v/@vanillawc/wc-marquee)](https://www.npmjs.com/package/@vanillawc/wc-marquee)
 [![downloads](https://badgen.net/npm/dt/@vanillawc/wc-marquee)](https://www.npmjs.com/package/@vanillawc/wc-marquee)
