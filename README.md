@@ -17,7 +17,7 @@ A Vanilla Web Component to ressurect our dearly beloved and sorely missed `<marq
 npm i @vanillawc/wc-marquee
 ```
 
-The package can be found in `node_modules/@vanillawc/wc-maquee`.
+Then import the `index.js` file at the root of the package.
 
 -----
 
