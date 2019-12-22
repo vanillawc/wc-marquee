@@ -30,7 +30,6 @@ export class WCMarquee extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.__element = this.shadowRoot.querySelector('.marquee');
     this.__partifier = null;
-
   }
 
   async connectedCallback () {
@@ -39,7 +38,7 @@ export class WCMarquee extends HTMLElement {
     this.party = this.hasAttribute('party');
   }
 
-  setParty() {
+  setParty () {
     const party = this.hasAttribute('party');
     if (party) {
       this.__partifier = setInterval(function () {
@@ -48,7 +47,6 @@ export class WCMarquee extends HTMLElement {
         const b = Math.floor(Math.random() * 255);
         this.__element.style.color = `rgb(${r}, ${g}, ${b})`;
       }, 400);
-      return;
     } else {
       if (this.__partifier) {
         clearInterval(this.partifier);
