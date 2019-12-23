@@ -11,16 +11,16 @@ export class WCMarquee extends HTMLElement {
     }
   }
 
-  // get party () { return this.hasAttribute('party'); }
-  // set party (value) {
-  //   const party = this.hasAttribute('party');
-  //   if (party) {
-  //     this.setAttribute('party', '');
-  //   } else {
-  //     this.removeAttribute('party');
-  //   }
-  //   this.setParty();
-  // }
+  get party () { return this.hasAttribute('party'); }
+  set party (value) {
+    const party = this.hasAttribute('party');
+    if (party) {
+      this.setAttribute('party', '');
+    } else {
+      this.removeAttribute('party');
+    }
+    this.setParty();
+  }
 
   constructor () {
     super();
@@ -54,6 +54,7 @@ export class WCMarquee extends HTMLElement {
       }, 400);
     } else {
       if (this.__partifier) {
+        this.__element.style.color = 'black';
         clearInterval(this.__partifier);
       }
     }
