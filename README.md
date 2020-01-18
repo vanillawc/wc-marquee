@@ -24,7 +24,11 @@ Then import the `index.js` file at the root of the package.
 
 ## Usage
 
-### Add some content to the body of the marquee
+**Attributes**
+
+- `party` - enable party mode
+
+### Basic Usage
 
 ```html
 <wc-marquee>
@@ -32,9 +36,7 @@ This text will marquee across the screen
 </wc-marquee>
 ```
 
-***Demo: [WC-Marquee - Demo][]***
-
-### Enable party mode
+### Party Mode
 
 ```html
 <wc-marquee party>
@@ -42,11 +44,9 @@ This will demonstrate the resplendent joy of HTML in its prime
 </wc-marquee>
 ```
 
-***Demo: [WC-Marquee - 'party'][]***
-
 ### Styling
 
-Stying can be done using standard css attributes.
+Styling can be done using standard css attributes.
 
 ```html
 <wc-marquee style="font-family: sans-serif;">
@@ -54,5 +54,8 @@ This will demonstrate the resplendent joy of HTML in its prime
 </wc-marquee>
 ```
 
-[WC-Marquee - Demo]: https://vanillawc.github.io/wc-marquee/demo/basic-usage.html
-[WC-Marquee - 'party']: https://vanillawc.github.io/wc-marquee/demo/party-attribute.html
+-----
+
+## Demos
+
+### [WC-Marquee - WebComponents.dev](https://webcomponents.dev/edit/xHimVOHvwKeM64huCe18?sv=1&pm=1)
