@@ -1,14 +1,13 @@
-[![GitHub Releases](https://img.shields.io/github/v/release/vanillawc/wc-marquee.svg)](https://github.com/vanillawc/wc-marquee/releases)
+[![GitHub Releases](https://badgen.net/github/tag/vanillawc/wc-marquee)](https://github.com/vanillawc/wc-marquee/releases)
 [![NPM Release](https://badgen.net/npm/v/@vanillawc/wc-marquee)](https://www.npmjs.com/package/@vanillawc/wc-marquee)
-[![Downloads](https://badgen.net/npm/dt/@vanillawc/wc-marquee)](https://www.npmjs.com/package/@vanillawc/wc-marquee)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillawc/wc-marquee/master/LICENSE)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@vanillawc/wc-marquee)](https://bundlephobia.com/result?p=@vanillawc/wc-marquee)
+[![MIT License](https://badgen.net/github/license/vanillawc/wc-marquee)](https://raw.githubusercontent.com/vanillawc/wc-marquee/master/LICENSE)
 [![Published on WebComponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/vanillawc/wc-marquee)
 [![Latest Status](https://github.com/vanillawc/wc-marquee/workflows/Latest/badge.svg)](https://github.com/vanillawc/wc-marquee/actions)
 [![Release Status](https://github.com/vanillawc/wc-marquee/workflows/Release/badge.svg)](https://github.com/vanillawc/wc-marquee/actions)
 
-A Vanilla Web Component to ressurect our dearly beloved and sorely missed `<marquee>` element
+A Vanilla Web Component to resurrect our dearly beloved and sorely missed `<marquee>` element
 
- <!-- TODO: Add video graphic here -->
 
 -----
 
