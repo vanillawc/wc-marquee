@@ -1,17 +1,17 @@
 /* eslint no-undef: 0 */
 class WCMarquee extends HTMLElement {
   static get observedAttributes () {
-    return ['party'];
+    return ['party']
   }
 
   attributeChangedCallback (name, oldValue, newValue) {
-    if (!this.__initialized) { return; }
+    if (!this.__initialized) { return }
     if (oldValue !== newValue) {
       this[name] = newValue;
     }
   }
 
-  get party () { return this.hasAttribute('party'); }
+  get party () { return this.hasAttribute('party') }
   set party (value) {
     const party = this.hasAttribute('party');
     if (party) {
@@ -85,7 +85,7 @@ class WCMarquee extends HTMLElement {
         }
       }
       </style>
-      <p class="marquee" style="width: inherit;"><span><slot></slot></span></p>`;
+      <p class="marquee" style="width: inherit;"><span><slot></slot></span></p>`
   }
 }
 

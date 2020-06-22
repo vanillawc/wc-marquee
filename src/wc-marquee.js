@@ -1,61 +1,61 @@
 /* eslint no-undef: 0 */
 export class WCMarquee extends HTMLElement {
   static get observedAttributes () {
-    return ['party'];
+    return ['party']
   }
 
   attributeChangedCallback (name, oldValue, newValue) {
-    if (!this.__initialized) { return; }
+    if (!this.__initialized) { return }
     if (oldValue !== newValue) {
-      this[name] = newValue;
+      this[name] = newValue
     }
   }
 
-  get party () { return this.hasAttribute('party'); }
+  get party () { return this.hasAttribute('party') }
   set party (value) {
-    const party = this.hasAttribute('party');
+    const party = this.hasAttribute('party')
     if (party) {
-      this.setAttribute('party', '');
+      this.setAttribute('party', '')
     } else {
-      this.removeAttribute('party');
+      this.removeAttribute('party')
     }
-    this.setParty();
+    this.setParty()
   }
 
   constructor () {
-    super();
-    const template = document.createElement('template');
-    template.innerHTML = WCMarquee.template();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-    this.__element = this.shadowRoot.querySelector('.marquee');
-    this.__initialized = false;
-    this.__partifier = null;
+    super()
+    const template = document.createElement('template')
+    template.innerHTML = WCMarquee.template()
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    this.__element = this.shadowRoot.querySelector('.marquee')
+    this.__initialized = false
+    this.__partifier = null
   }
 
   async connectedCallback () {
-    this.style.width = (this.style.width) ? this.style.width : '100%';
-    this.style.fontFamily = (this.style.fontFamily) ? this.style.fontFamily : 'Comic Sans MS';
+    this.style.width = (this.style.width) ? this.style.width : '100%'
+    this.style.fontFamily = (this.style.fontFamily) ? this.style.fontFamily : 'Comic Sans MS'
     if (this.hasAttribute('party')) {
-      this.setParty();
+      this.setParty()
     }
 
-    this.__initialized = true;
+    this.__initialized = true
   }
 
   setParty () {
-    const party = this.hasAttribute('party');
+    const party = this.hasAttribute('party')
     if (party) {
       this.__partifier = setInterval(() => {
-        const r = Math.floor(Math.random() * 255);
-        const g = Math.floor(Math.random() * 255);
-        const b = Math.floor(Math.random() * 255);
-        this.__element.style.color = `rgb(${r}, ${g}, ${b})`;
-      }, 400);
+        const r = Math.floor(Math.random() * 255)
+        const g = Math.floor(Math.random() * 255)
+        const b = Math.floor(Math.random() * 255)
+        this.__element.style.color = `rgb(${r}, ${g}, ${b})`
+      }, 400)
     } else {
       if (this.__partifier) {
-        this.__element.style.color = 'black';
-        clearInterval(this.__partifier);
+        this.__element.style.color = 'black'
+        clearInterval(this.__partifier)
       }
     }
   }
@@ -85,8 +85,8 @@ export class WCMarquee extends HTMLElement {
         }
       }
       </style>
-      <p class="marquee" style="width: inherit;"><span><slot></slot></span></p>`;
+      <p class="marquee" style="width: inherit;"><span><slot></slot></span></p>`
   }
 }
 
-customElements.define('wc-marquee', WCMarquee);
+customElements.define('wc-marquee', WCMarquee)
