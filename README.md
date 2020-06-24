@@ -1,4 +1,4 @@
-<h1 align="center">&lt;wc-marquee&gt;: The Marquee Tag as a Web Component</h1>
+<h1 align="center">&lt;wc-marquee&gt; The Marquee Tag as a Web Component</h1>
 
 <div align="center">
   <a href="https://github.com/vanillawc/wc-marquee/releases"><img src="https://badgen.net/github/tag/vanillawc/wc-marquee" alt="GitHub Releases"></a>
