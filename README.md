@@ -4,10 +4,11 @@
   <a href="https://github.com/vanillawc/wc-marquee/releases"><img src="https://badgen.net/github/tag/vanillawc/wc-marquee" alt="GitHub Releases"></a>
   <a href="https://www.npmjs.com/package/@vanillawc/wc-marquee"><img src="https://badgen.net/npm/v/@vanillawc/wc-marquee" alt="NPM Releases"></a>
   <a href="https://bundlephobia.com/result?p=@vanillawc/wc-marquee"><img src="https://badgen.net/bundlephobia/minzip/@vanillawc/wc-marquee" alt="Bundlephobia"></a>
-  <a href="https://raw.githubusercontent.com/vanillawc/wc-marquee/master/LICENSE"><img src="https://badgen.net/github/license/vanillawc/wc-marquee" alt="MIT License"></a>
-  <a href="https://www.webcomponents.org/element/vanillawc/wc-marquee"><img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on WebComponents.org"></a>
   <a href="https://github.com/vanillawc/wc-marquee/actions"><img src="https://github.com/vanillawc/wc-marquee/workflows/Latest/badge.svg" alt="Latest Status"></a>
   <a href="https://github.com/vanillawc/wc-marquee/actions"><img src="https://github.com/vanillawc/wc-marquee/workflows/Release/badge.svg" alt="Release Status"></a>
+
+  <a href="https://discord.gg/8ur9M5"><img alt="Discord" src="https://img.shields.io/discord/723296249121603604?color=%23738ADB"></a>
+  <a href="https://www.webcomponents.org/element/vanillawc/wc-marquee"><img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on WebComponents.org"></a>
 </div>
 
 ## Installation
@@ -24,7 +25,7 @@ npm i @vanillawc/wc-marquee
 
 *Import from CDN*
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-marquee/index.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-marquee@1/index.js"></script>
 ```
 
 ## Demo
@@ -62,3 +63,7 @@ Styling can be done using standard css attributes.
 This will demonstrate the resplendent joy of HTML in its prime
 </wc-marquee>
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/vanillawc/vanillawc/blob/main/CONTRIBUTING.md)
