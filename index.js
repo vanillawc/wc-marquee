@@ -1,50 +1,48 @@
-/* eslint no-undef: 0 */
+// src/wc-marquee.js
 class WCMarquee extends HTMLElement {
-  static get observedAttributes () {
-    return ['party']
+  static get observedAttributes() {
+    return ["party"];
   }
-
-  attributeChangedCallback (name, oldValue, newValue) {
-    if (!this.__initialized) { return }
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (!this.__initialized) {
+      return;
+    }
     if (oldValue !== newValue) {
       this[name] = newValue;
     }
   }
-
-  get party () { return this.hasAttribute('party') }
-  set party (value) {
-    const party = this.hasAttribute('party');
+  get party() {
+    return this.hasAttribute("party");
+  }
+  set party(value) {
+    const party = this.hasAttribute("party");
     if (party) {
-      this.setAttribute('party', '');
+      this.setAttribute("party", "");
     } else {
-      this.removeAttribute('party');
+      this.removeAttribute("party");
     }
     this.setParty();
   }
-
-  constructor () {
+  constructor() {
     super();
-    const template = document.createElement('template');
+    const template = document.createElement("template");
     template.innerHTML = WCMarquee.template();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({mode: "open"});
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-    this.__element = this.shadowRoot.querySelector('.marquee');
+    this.__element = this.shadowRoot.querySelector(".marquee");
     this.__initialized = false;
     this.__partifier = null;
   }
-
-  async connectedCallback () {
-    this.style.width = (this.style.width) ? this.style.width : '100%';
-    this.style.fontFamily = (this.style.fontFamily) ? this.style.fontFamily : 'Comic Sans MS';
-    if (this.hasAttribute('party')) {
+  async connectedCallback() {
+    this.style.width = this.style.width ? this.style.width : "100%";
+    this.style.fontFamily = this.style.fontFamily ? this.style.fontFamily : "Comic Sans MS";
+    if (this.hasAttribute("party")) {
       this.setParty();
     }
-
     this.__initialized = true;
   }
-
-  setParty () {
-    const party = this.hasAttribute('party');
+  setParty() {
+    const party = this.hasAttribute("party");
     if (party) {
       this.__partifier = setInterval(() => {
         const r = Math.floor(Math.random() * 255);
@@ -54,13 +52,12 @@ class WCMarquee extends HTMLElement {
       }, 400);
     } else {
       if (this.__partifier) {
-        this.__element.style.color = 'black';
+        this.__element.style.color = "black";
         clearInterval(this.__partifier);
       }
     }
   }
-
-  static template () {
+  static template() {
     return `
       <style>
       .marquee {
@@ -85,10 +82,10 @@ class WCMarquee extends HTMLElement {
         }
       }
       </style>
-      <p class="marquee" style="width: inherit;"><span><slot></slot></span></p>`
+      <p class="marquee" style="width: inherit;"><span><slot></slot></span></p>`;
   }
 }
-
-customElements.define('wc-marquee', WCMarquee);
-
-export { WCMarquee };
+customElements.define("wc-marquee", WCMarquee);
+export {
+  WCMarquee
+};
