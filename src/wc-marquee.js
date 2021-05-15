@@ -43,6 +43,10 @@ export class WCMarquee extends HTMLElement {
     this.__initialized = true
   }
 
+  disconnectedCallback () {
+    this.__partifier = null
+  }
+
   setParty () {
     const party = this.hasAttribute('party')
     if (party) {
